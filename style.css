@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  color: white;
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#typing {
+  font-size: 50px;
+  border-right: 3px solid white;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* MAIN */
+#main {
+  height: 100vh;
+  background: linear-gradient(135deg, #ffc0cb, #1a1a1a);
+}
+
+/* HIDE */
+.hidden {
+  display: none;
+}
+
+/* TEXT */
+.container {
+  position: relative;
+  top: 20%;
+}
+
+.hbd {
+  font-size: 120px;
+  animation: bounce 2s infinite;
+}
+
+.name {
+  font-size: 60px;
+}
+
+.date {
+  font-size: 28px;
+}
+
+.wish {
+  font-size: 22px;
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+/* Balloon */
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120vh); }
+}
+
+/* Confetti */
+@keyframes fall {
+  from { transform: translateY(-10vh); }
+  to { transform: translateY(100vh); }
+}
