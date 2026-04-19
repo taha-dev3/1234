@@ -5,18 +5,26 @@
   <title>Happy Birthday Amna 🎉</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<audio autoplay loop>
-  <button onclick="playMusic()">🎵 Play Birthday Music</button>
+<body
+  <button id="btn">🎵 Play Birthday Music</button>
 
 <audio id="music" loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-function playMusic() {
-  document.getElementById("music").play();
-}
+const btn = document.getElementById("btn");
+const music = document.getElementById("music");
+
+btn.addEventListener("click", function () {
+  music.play()
+    .then(() => {
+      console.log("Music playing");
+    })
+    .catch(err => {
+      alert("Play nahi ho raha: " + err);
+    });
+});
 </script>
 <!-- INTRO -->
 <div id="intro">
